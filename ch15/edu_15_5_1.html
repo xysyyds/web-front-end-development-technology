@@ -1,0 +1,30 @@
+<!--  edu_15_5_1.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>窗口事件的应用</title>
+    <style type="text/css">
+      p {
+        width: 200px;
+        height: 40px;
+        border: 1px solid black;
+      }
+    </style>
+    <script type="text/javascript">
+      function load() {
+        alert("欢迎访问本页面!");
+      }
+    </script>
+  </head>
+  <body onload="load();">
+    <h4>窗口事件的应用</h4>
+    <p onclick="alert('单击我！')">单击我！</p>
+    <script type="text/javascript">
+      window.onbeforeunload = function() {
+        console.log("onbeforeunload is work!");
+        return "onbeforeunload is work!";
+      }
+    </script>
+  </body>
+</html>

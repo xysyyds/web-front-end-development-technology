@@ -1,0 +1,22 @@
+<!-- edu_15_2_1.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>获得/失去焦点测试</title>
+    <script type="text/javascript">
+      function getFocus() {
+        document.bgColor = "#F1F2F3";
+      }
+
+      function loseFocus() {
+        document.bgColor = "FF66FF";
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <br /><input type="button" onfocus="getFocus()" value="获得/失去焦点触发事件" onblur="loseFocus()" />
+    </form>
+  </body>
+</html>
