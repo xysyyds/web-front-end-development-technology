@@ -1,0 +1,25 @@
+<!-- edu_17_1_8.html -->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>生成range对象</title>
+	</head>
+
+	<body>
+		<script>
+			//假设数据库创建及对象仓库初始化工作已经完成,生成range对象，同edu_17_1_7.html
+			var range1 = IDBKeyRange.upperBound(x); // All keys ≤ x
+			var range2 = IDBKeyRange.upperBound(x, true); // All keys < x
+			var range3 = IDBKeyRange.lowerBound(y); // All keys ≥ y
+			var range4 = IDBKeyRange.lowerBound(y, true); // All keys > y
+			var range5 = IDBKeyRange.bound(x, y); // All keys ≥ x && ≤ y
+			var range6 = IDBKeyRange.bound(x, y, true, true); // All keys > x &&< y
+			var range7 = IDBKeyRange.bound(x, y, true, false); // All keys > x && ≤ y
+			var range8 = IDBKeyRange.bound(x, y, false, true); // All keys ≥ x &&< y	
+			var range9 = IDBKeyRange.only(z); // The key = z
+		</script>
+	</body>
+
+</html>

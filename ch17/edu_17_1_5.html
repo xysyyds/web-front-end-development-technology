@@ -1,0 +1,16 @@
+<!-- edu_17_1_5.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>创建事务和获取对象仓库</title>
+	</head>
+	<body>
+		<script>
+			//假设数据库创建及对象仓库初始化工作已经完成,借助于edu_17_1_3.html和edu_17_1_4.html
+			var transaction1 = db.transaction("books", "readwrite"); //为一个对象创建一个读写事务
+			var transaction2 = db.transaction(["books", "press"], "readwrite"); //为两个对象库创建一个读写事务
+			var objectStore = transaction1.objectStore("books "); //获取books对象仓库
+		</script>
+	</body>
+</html>

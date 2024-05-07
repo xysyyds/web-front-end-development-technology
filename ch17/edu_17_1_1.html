@@ -1,0 +1,31 @@
+<!-- edu_17_1_1.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>localStorage对象的应用</title>
+		<style type="text/css">
+			div {
+				text-align: center;padding: 20px;margin: 0 auto;
+				border: 10px ridge #005A9C;width: 350px;height: 250px;				
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h3>最可爱的人评选</h3>
+			<img src="image-17-1-1.jpg" width="80" height="80" title="你的名字叫英雄"><br>
+			<p id="result"></p>
+			<p>刷新页面票数会增长。</p>
+			<p>请关闭浏览器后重试仍会增长</p>
+		</div>
+		<script type="text/javascript">
+			if (localStorage.tickets) {
+				localStorage.tickets = parseInt(localStorage.tickets) + 1;
+			} else {
+				localStorage.tickets = 1;
+			}
+			document.getElementById("result").innerHTML = "已投: " + localStorage.tickets + "票";
+		</script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- edu_17_1_4.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>创建索引</title>
+	</head>
+	<body>
+		<script>
+			//假设数据库创建及对象仓库初始化工作已经完成,借助于edu_17_1_3.html
+			var titleIndex = store.createIndex("by_title", "title", {
+				unique: false
+			}); //标题索引
+			var authorIndex = store.createIndex("by_author", "author"); //作者索引
+		</script>
+	</body>
+</html>

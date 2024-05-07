@@ -1,0 +1,25 @@
+<!-- edu_17_1_6.html -->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>批量添加对象</title>
+	</head>
+
+	<body>
+		<script>
+			//假设数据库创建及对象仓库初始化工作已经完成，同edu_17_1_5.html
+			for (var i = 0; i < booklists.length; i++) { //采用for循环将3个对象添加到指定对象仓库
+				request = objectStore.add(booklists[i]); //添加对象到books中，也可以用put()方法
+				request.onerror = function() {
+					console.error('数据库中已有该对象,不能重复添加！！');
+				};
+				request.onsuccess = function() { //控制台输出或某个HTML标记内输出
+					console.log('对象已成功存入对象仓库中！')
+				};
+			}
+		</script>
+	</body>
+
+</html>
